@@ -1,1 +1,3 @@
 get_prop(system_server, vendor_persist_camera_prop)
+# App Lock
+add_service(system_server, applock_service);
