@@ -127,6 +127,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dev.pm.dyn_samplingrate=1 \
     ro.opengles.version=196610 \
     ro.qualcomm.cabl=0
+    debug.sf.disable_hwc=0 \
+    debug.sf.gpu_comp_tiling=1 \
+    debug.performance.tuning=1 \
 
 # Factory reset partition
 PRODUCT_PROPERTY_OVERRIDES += \
