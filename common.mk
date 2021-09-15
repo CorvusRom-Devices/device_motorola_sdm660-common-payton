@@ -36,6 +36,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Tethering
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@5.0-impl \
@@ -129,10 +133,6 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1
-
-# Gcam
-PRODUCT_PACKAGES += \
-    GoogleCameraGo
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -376,9 +376,6 @@ PRODUCT_BOOT_JARS += \
 # Tethering
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    net.tethering.noprovisioning=true
 
 # Thermal
 PRODUCT_PACKAGES += \
